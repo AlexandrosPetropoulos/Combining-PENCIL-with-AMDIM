@@ -29,10 +29,28 @@ Since the encoder is trained without labels, it has already learned good represe
     ├── data                    # contains folders for each dataset separately
     │   └── cifar10
     ├── utils                   # help functions
-    │   ├── cifar10.py          # definition for Cifar10 dataset class
+    │   ├── cifar10_subset.py   # definition for Cifar10 dataset class
     |   └── mypreactresnet.py   # definition for preact ResNet32 model
-    ├── PENCIL_amdim.py             # implementation of PENCIL framework
-    └── ...
+    ├── 10000.npy               # 
+    ├── 20000.npy               # 
+    .
+    .
+    .
+    ├── PENCIL.py               # 
+    ├── check_distributions.py  # 
+    ├── checkpoint.py           #  
+    ├── clean.npy               # 
+    ├── costs.py                # 
+    ├── dokimi.npy              # 
+    ├── info.txt                # 
+    ├── make_distribution.py    # 
+    ├── mixed_precision.py      # 
+    ├── model.py                # 
+    ├── task_classifiers.py     # 
+    ├── test.py                 # 
+    ├── train.py                # 
+    └── utils_amdim.py          # 
+
 ```
 
 ## Requirements
@@ -46,8 +64,11 @@ Since the encoder is trained without labels, it has already learned good represe
 ## Usage
 Examples for running the method are :
 
-     python PENCIL_amdim.py --noise symmetric --noise_rate 0.3 --lr 0.03 --alpha 0.1 --beta 0.8 --lambda1 300 --run-without-validation --start-epoch 70 --choose_loss_function 3 --lambda_epoch 120
-
+     python PENCIL.py --noise clean --noise_rate 0.0 --lr 0.02 --alpha 0.1 --beta 0.8 --lambda1 200 --run-without-validation --classifiers
+     
+     python PENCIL.py --noise symmetric --noise_rate 0.1 --lr 0.02 --alpha 0.1 --beta 0.8 --lambda1 200 --run-without-validation --classifiers
+     
+     python PENCIL.py --noise asymmetric --noise_rate 0.3 --lr 0.03 --alpha 0.1 --beta 0.8 --lambda1 300 --run-without-validation --classifiers
 
 
 ## Experiments

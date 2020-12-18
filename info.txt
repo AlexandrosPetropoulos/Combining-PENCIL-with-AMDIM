@@ -1,0 +1,4 @@
+san input N.npy deigmata. Diavazo panta to clean dataset kai thorivo vazo ekeini tin stigmi, opos ekana
+arxika sto PENCIL
+classifier einai o linear apo to AMDIM
+anti gia 70 epoxes stin arxi exo 5
